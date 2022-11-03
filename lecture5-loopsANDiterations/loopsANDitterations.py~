@@ -1,0 +1,53 @@
+#!/usr/bin/env python3
+
+
+#SUMMARY: if and while LOOPS CONDITIONS HAVE TO HAVE A COL0N, : AT THE END.
+
+#WHILE loops
+value = -1
+print("enter a positive value to exit while loop of inputs")
+while value<=0:
+    value = int(input("enter a -ve value to continue, +ve to exit: "))
+    print("value entered as integer is ", value)
+print("we just exited the while loop as as you entered a +ve number")
+
+num_people = int(input("How many people are there? "))
+i = 0
+total_age = 0.0
+while (i < num_people):
+    age = float(input("Enter the age of person " +str(i+1)+ ": "))
+    total_age = total_age + age
+    i = i+1
+average_age = total_age / num_people
+print("The average age was", average_age)
+
+# A while loop is  used when we’re not sure how  many times we’ll need
+# to iterate  through the  loop; a  for loop  is used  when we  have a
+# precise set of things to loop through,
+
+# FOR loop:  where we increment some  value by one on  every iteration
+# (meaning one time through a loop),
+
+# We start with the word “for.”  We then give the iterator variable we
+# want to use, which  is i in this case. Then, we  have the word “in.”
+# And then we have the range, followed by a colon.
+
+# range STATEMENT:
+# ---------------
+
+# * specifies starting index of 0, max index within range parentheses,
+#   itteration increment is 1.
+
+# * If  there are  two values  in the  parentheses we  increment by  1
+#   starting from the first value and not exceeding the second.
+
+# * If there are three numbers, start index, limit index and increment
+# * amount.  If the increment amount is -ve you countdown.
+
+print("range statement")
+max_index=3 # iterator max value, or max index
+for index in range(max_index):
+    print(i)
+
+for index in range(5, 1, -1):
+    print(i)

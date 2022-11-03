@@ -1,0 +1,62 @@
+#!/usr/bin/env python3
+
+# You must make your scripts python3 for the example code from this
+# course to work.
+ 
+###############################################################################
+#                     YOU CAN SKIM most of the video and/jump to the
+#                     coding sedtion at 25min if you've read the guide.
+###############################################################################
+
+# Also,  Python as  an interpreted  language 12:53min,  is interesting
+# though.  Python is an interpreted language  as you can go through it
+# line by line and understand what  it is doing, hence python programs
+# are  also called  scripts.  Thus  python can  be called  a scripting
+# language, that is an interprative  language that gives you access to
+# some high level  commands.  To use it as an  iterprative language on
+# linux, type 'python'  on the command line and  execute the following
+# code(exercises) without  using the  print statement and  without the
+# print statement.
+
+# Exercises:
+print("Exercises: see comments on why they call python  an interpreted\n"
+      "language.  In linux just type 'python' on the command line to see.")
+print(1+2+3+4+5)
+print("1+2+3+4+5")
+print(3**2 + 4**2)
+print(3*(5+2))
+#print(100)
+print(1/2 + 1/2)
+
+# remember a fraction is represented as: quotient/remainder
+print (1//2 + 1//2) # quotient returned and ignore remainder
+print(10/3)
+print(10/4)
+
+print(3985780149 % 2) # remainder retusimn; % is also called the modulus
+                      # operator
+print(10%3)
+print(9%2)
+print(13%7)
+print(16%6)
+
+
+# @18min, python allows differenct  styles of programming, procedural,
+# like c and fortran, and object oriented like c++.  The course starts
+# with  procedural programming  and does  oo  in the  last third.   It
+# supports functional  programming also but  it's not covered  in this
+# course. You can combine the styles in the one program.
+
+# @19min In python INDENTATION MATTERS.
+
+
+# 25min Gettig user  input, REMEBER this is using  python3, won't work
+# in python2.   Make sure you MAKE  THIS SCRIPT A PYTHON3  one or this
+# wont  work. On  ubuntu  18.04  the default  'python'  command has  a
+# simlink  to  the  latest  version of  python2.   Making  the  script
+# 'python3' on the  first line will get the linux  symlink to point to
+# the latest python3 on the system.
+
+name = input ("enter your name: ")
+print("hello", name)
+

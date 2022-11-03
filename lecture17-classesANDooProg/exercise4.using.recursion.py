@@ -1,0 +1,29 @@
+#!/usr/bin/env python3
+
+print("\nex4:\n"
+      "Create movies class with members and give default values of\n"
+      "name, genre, rating(0-10, -ve number exits.)")
+movies = [] # global list of movies entered by the user
+def addMovie2list():
+    name = input("Enter movie name: ")
+    genre =  input("Enter movie genre: ")
+    # converts      string       to      import      code;
+    # code.interact(local=locals())eger, all  command line
+    # input is treated as a string remember
+    rating = int(input("Enter your rating for the movie: "))
+    a_movie = (name, genre, rating)
+    if rating >=0 :
+        movies.append(a_movie)
+        #print(a_movie)
+        addMovie2list()
+    return movies
+
+# main
+addMovie2list()
+print("Calling addMovie2list() using recursion and \n"
+      "return the movies global list when done.")
+print("List of movies user entered using a recursive input routine: ")
+for i in range(len(movies)):
+    # iterates the global movies list
+    print(movies[i])
+print("Movies list printed horozontally: ", movies)

@@ -1,0 +1,177 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+
+###############################################################################
+#                             RECUSION: MERGE SORT#
+###############################################################################
+# RECURSION: can be, but isn’t always,  a great way to create efficient
+# code.  The great trick in recursion is that a function is calling
+# itself.
+
+def countdown(n):
+    print(n)
+    if n > 0:
+        countdown(n-1)
+
+
+countdown(5)
+
+###############################################################################
+#              USING RECUSRSION in DIVIDE and CONQUER algorithms
+###############################################################################
+
+# We use  recusrion and  take a  large data set  and dividing  it into
+# subsets that we  handle independently, so they are  smaller and thus
+# easier to deal with.
+
+
+# MERGE SORT is a divide and conquer algorithm.  We take a large sorting
+# problem and  reduce it  to two  small sorting  problems that  we solve
+# recusively.  Firstly you must devide the dataset into two lists before
+# sorting each.  And finally merge the data from each list.
+
+# NOTE: the recusion  routine that keeeps calling itself ahs  to stop at
+# some point  or it  will go on  forever.  The point  where it  stops is
+# called the base case.
+
+
+def merge(L, L1, L2):
+    i = 0
+    j = 0
+    k = 0
+    while (j < len(L1)) or (k < len(L2)):
+        if j < len(L1):
+            if k < len(L2):
+                # we are not at the end of L1 or L2, so pull the smaller value
+                if L1[j] < L2[k]:
+                    L[i] = L1[j]
+                    j += 1
+                else:
+                    L[i] = L2[k]
+                    k += 1
+            else:
+                #we are at the end of L2, so just pull from L1
+                L[i] = L1[j]
+                j += 1
+        else:
+t            #we are at the end of L1, so just pull from L2
+            L[i] = L2[k]
+            k += 1
+            i += 1
+    return
+
+
+
+def mergeSort(L):
+    n = len(L)
+    if n <= 1:
+        return
+    L1 = L[:n//2]
+    L2 = L[n//2:]
+    mergeSort(L1)
+    mergeSort(L2)
+    merge(L, L1, L2)
+    return
+
+
+
+myList = [6, 5, 10, 2, 7]
+print("myList is: ", myList)
+print("using mergeSort, which includes a recursion algorithim, myList becomes:")
+mergeSort(myList)
+print(myList)
+
+
+###############################################################################
+#                             RECURSION: QUICKSORT                            #
+###############################################################################
+
+# Another example of a devide and conquer routine.  Ie split dataset and
+# perform operations on it using recursion as part of your algorithim.
+
+def quickSort(L):
+    #handle base case
+    if len(L) <= 1: # if we have one or less elements in our list it's
+                    # sorted already
+        return
+
+    #pick pivot
+    pivot = L[0]
+    #form lists less/greater than pivot
+    L1 = []
+    L2 = []
+    for element in L[1:]:
+        if element < pivot:
+            L1.append(element)
+        else:
+            L2.append(element)
+
+    #sort sublists
+    quickSort(L1)
+    quickSort(L2)
+
+    #join the sublists and pivot
+    L[:] = []
+    for element in L1:
+        L.append(element)
+        L.append(pivot)
+    for element in L2:
+        L.append(element)
+
+    return
+
+
+
+myList = [6, 5, 10, 2, 7]
+print("myList is: ", myList)
+print("using quickSort, which includes a recursion algorithim, myList becomes:")
+mergeSort(myList)
+print(myList)
+
+
+# In the  case of  sort routines,  Python has  a built-in  sort routine,
+# which uses a  combination of a merge sort and  an insertion sort. That
+# built-in  Python  sort is  really  efficient.   In fact,  that  should
+# usually be the  version you use.  Most other languages  will have some
+# similar built-in sort function.
+
+# c language has qsort() that it uses, rgooch and rvagg says this is the
+# common thing to do to sort an array/list.
+
+
+# using pythons inbuilt, ie in-placed merge sort routine
+myList = [6, 5, 10, 2, 7]
+myList_sorted = sorted(myList)
+print("my list using the inbuilt python .sorted() method is, out-of-place sort: ",
+      myList_sorted)
+
+myList = [6, 5, 10, 2, 7]
+myList.sort()
+print("my list using the inbuilt python sort() method is, in-place sort: ",
+      myList)
+
+print("\n\nPython's in built .sort method is most of the time better than:\n"
+      "mergeSort(),quickSort(), insertionSort() or selectionSort(),\n"
+      "So use it in python in general.\n\n")
+
+print("\n\nEven though  merge sort works  better on large problems, insertion sort\n"
+      "works faster on smaller problems. The Python sort routine basically uses\n"
+      "merge  sort  for  the  overall  problem,  but  once  it’s  dealing  with\n"
+      "sufficiently small problems, it switches to insertion sort.")
+
+
+print("\n\nBy selecting a different algorithm, we can sometimes turn a problem\n"
+      "that seems completely impossible into one that’s easily solved. It’s\n"
+      "worth analyzing your code to determine running time, to make sure that\n"
+      "you’re not being wildly or unnecessarily inefficient in the algorithm\n"
+      "you’ve chosen to solve a problem.\n")
+
+
+print("The options are as follows:")
+print("* constant time (independent of the number of elements in the list)")
+print("* logarithmic time (proportional to the log of the number of elements in the list)")
+print("* linear time (proportional to the number of elements in the list)")
+print("* n log n time (proportional to the length times the log of the length of the list)")
+print("* quadratic time (proportional to the square of the length of the list)")
+print("* exponential time (proportional to an exponential function of the length of the list).")

@@ -1,0 +1,70 @@
+#!/usr/bin/env python
+
+# A few of the most well-known algorithms for searching and sorting
+
+# Algorithms
+
+# Say for example we are trying to find v value in list L, is it there or not.
+
+# Linear searching, you go down the  line, looking at each item in the
+# list.  Write this function.
+
+def isIn(L, v):
+    # is v in list L, return true or faluse
+    i=0
+    while (i<len(L)):
+        if L[i] == v:
+            return True
+        else:
+            i+=1
+
+    return False #if we haven't retruned by now v is not in list L
+
+
+
+favorite_foods = ['pizza', 'barbeque', 'gumbo', 'chicken and dumplings',
+                  'pecan pie', 'ice cream']
+print(isIn(favorite_foods, 'gumbo'))
+print(isIn(favorite_foods, 'coconut'))
+
+
+# However, using the built-in function in the _in_ command does the
+# same as isIn().  This linearly searches each element of the list. 
+if 'gumbo' in favorite_foods:
+    print("gumbo is in favourite_foods list")
+    print(True)
+else:
+    print("gumbo is NOT in favourite_foods list")
+    print(False)
+
+if 'coconut' in favorite_foods:
+    print("coconut is in favourite_foods list")
+    print(True)
+else:
+    print("coconut is NOT in favourite_foods list")
+    print(False)
+
+
+# 
+# SORTING A LIST ALLOWS YOU TO SEARCH FOR VALUES MORE EFFICIENTLY.
+#
+
+# BINARY SEARCH  IMPLEMENTATION, need  to sort  list first.   Where we
+# reduce  the search  range  by a  factor  of 2.   This  is much  more
+# efficient than the  linear search.  Implement here  from pseudo code
+# for practice.
+
+def binaryIn(L, v):
+    minIndex = 0
+    maxIndex = len(L) - 1
+
+#   if L[minIndex] == v or L[maxIndex] == v:  return True
+    
+    if L[minIndex] == v or L[maxIndex] == v:
+        return True
+        
+
+        
+
+    
+

@@ -1,0 +1,113 @@
+True
+False
+using LINEAR SEARCH, gumbo is in favourite_foods list
+True
+using LINEAR SEARCH, coconut is NOT in favourite_foods list
+False
+
+UN-SORTED favourite_foods ARE:
+['pizza', 'barbeque', 'gumbo', 'chicken and dumplings', 'pecan pie', 'ice cream']
+selectionSort() SORTED favourite_foods ARE:
+['gumbo', 'chicken and dumplings', 'pecan pie', 'ice cream', 'pizza', 'barbeque']
+
+using BINARY SEARCH, gumbo is in favourite foods
+using BINARY SEARCH, coconut is NOT in favourite foods
+
+UN-SORTED favourite_foods ARE:
+['gumbo', 'chicken and dumplings', 'pecan pie', 'ice cream', 'pizza', 'barbeque']
+sort() METHOD, built in python in_place/insertion sort and merge sort on favourite_foods is:
+['barbeque', 'chicken and dumplings', 'gumbo', 'ice cream', 'pecan pie', 'pizza']
+
+UN-SORTED favourite_foods ARE:
+['barbeque', 'chicken and dumplings', 'gumbo', 'ice cream', 'pecan pie', 'pizza']
+sorted() Fn out-of-place sorted, built in python fn, favourte_foods are:
+['barbeque', 'chicken and dumplings', 'gumbo', 'ice cream', 'pecan pie', 'pizza']
+REVERSE sorted() Fn out-of-place sorted, built in python fn, favourte_foods are:
+['pizza', 'pecan pie', 'ice cream', 'gumbo', 'chicken and dumplings', 'barbeque']
+
+UN-SORTED favourite_foods ARE:
+['barbeque', 'chicken and dumplings', 'gumbo', 'ice cream', 'pecan pie', 'pizza']
+
+('temp=', 'barbeque')
+('before while loop i=', 0, ',j=', -1)
+
+('j+1 is', 0)
+('outside while, list is: ', ['barbeque', 'chicken and dumplings', 'gumbo', 'ice cream', 'pecan pie', 'pizza'])
+
+('temp=', 'chicken and dumplings')
+('before while loop i=', 1, ',j=', 0)
+
+('j+1 is', 1)
+('outside while, list is: ', ['barbeque', 'chicken and dumplings', 'gumbo', 'ice cream', 'pecan pie', 'pizza'])
+
+('temp=', 'gumbo')
+('before while loop i=', 2, ',j=', 1)
+
+('j+1 is', 2)
+('outside while, list is: ', ['barbeque', 'chicken and dumplings', 'gumbo', 'ice cream', 'pecan pie', 'pizza'])
+
+('temp=', 'ice cream')
+('before while loop i=', 3, ',j=', 2)
+
+('j+1 is', 3)
+('outside while, list is: ', ['barbeque', 'chicken and dumplings', 'gumbo', 'ice cream', 'pecan pie', 'pizza'])
+
+('temp=', 'pecan pie')
+('before while loop i=', 4, ',j=', 3)
+
+('j+1 is', 4)
+('outside while, list is: ', ['barbeque', 'chicken and dumplings', 'gumbo', 'ice cream', 'pecan pie', 'pizza'])
+
+('temp=', 'pizza')
+('before while loop i=', 5, ',j=', 4)
+
+('j+1 is', 5)
+('outside while, list is: ', ['barbeque', 'chicken and dumplings', 'gumbo', 'ice cream', 'pecan pie', 'pizza'])
+ Fn out-of-place sorted, built in python fn, favourte_foods are:
+['barbeque', 'chicken and dumplings', 'gumbo', 'ice cream', 'pecan pie', 'pizza']
+
+
+('temp=', 6)
+('before while loop i=', 0, ',j=', -1)
+
+('j+1 is', 0)
+('outside while, list is: ', [6, 5, 10, 2, 7])
+
+('temp=', 5)
+('before while loop i=', 1, ',j=', 0)
+('i=', 1, ',j=', 0)
+('in while, list is: ', [6, 6, 10, 2, 7])
+
+('j+1 is', 0)
+('outside while, list is: ', [5, 6, 10, 2, 7])
+
+('temp=', 10)
+('before while loop i=', 2, ',j=', 1)
+
+('j+1 is', 2)
+('outside while, list is: ', [5, 6, 10, 2, 7])
+
+('temp=', 2)
+('before while loop i=', 3, ',j=', 2)
+('i=', 3, ',j=', 2)
+('in while, list is: ', [5, 6, 10, 10, 7])
+('i=', 3, ',j=', 1)
+('in while, list is: ', [5, 6, 6, 10, 7])
+('i=', 3, ',j=', 0)
+('in while, list is: ', [5, 5, 6, 10, 7])
+
+('j+1 is', 0)
+('outside while, list is: ', [2, 5, 6, 10, 7])
+
+('temp=', 7)
+('before while loop i=', 4, ',j=', 3)
+('i=', 4, ',j=', 3)
+('in while, list is: ', [2, 5, 6, 10, 10])
+
+('j+1 is', 3)
+('outside while, list is: ', [2, 5, 6, 7, 10])
+
+('mylist is', [2, 5, 6, 7, 10])
+
+
+('mylist is', [2, 5, 7, 10, 6])

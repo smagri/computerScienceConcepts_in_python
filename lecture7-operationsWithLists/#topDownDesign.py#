@@ -1,0 +1,26 @@
+#!/usr/bin/env python
+
+#weather.cvs
+#date, highTemp, lowTemp, rainfall
+
+# weather.csv date, high temperature on that date, the low temperature
+# on that date,  and the rainfall on that date.
+
+
+# This type of  file is called a comma-separated value  (CSV) file, or
+# sometimes a comma-delimited file. For  data that starts out in Excel
+# or another  spreadsheet program,  it’s easy  to use  the spreadsheet
+# program to  output the data  values, separated  by commas, as  a CSV
+# file.
+
+# HOWTO GET CVS FILE from CUT and PAST
+# To get  weather data  like this, you  can go to  any one  of several
+# weather  sites, some  of  which  will let  you  download  it into  a
+# spreadsheet, but you can ALSO CUT  AND PASTE DATA INTO A SPREADSHEET
+# then you can save it in as a CVS file yourself.
+
+cb
+
+https://docs.python.org/3/tutorial/index.html
+fname = input("Enter the name of the data file:")
+fhandle = open(fname, 'r')
